@@ -188,3 +188,8 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+.logout-btn {
+  background-color:#212529;
+  font-family: 'Verdana', serif !important;
+  color: white;
+}
