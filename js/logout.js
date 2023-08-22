@@ -5,3 +5,4 @@ logoutBtn.addEventListener("click", () => {
     sessionStorage.removeItem("isLoggedIn");
     localStorage.removeItem("username");
     window.location.href = "login.html";
+});
