@@ -188,3 +188,22 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+
+.logout-btn{
+  background-color:#212529;
+  font-family: 'Verdana', serif !important;
+  color: white;
+  vertical-align: middle;
+}
+
+#username-display {
+  font-family: 'Verdana', serif !important;
+  color: white;
+  vertical-align: middle;
+  padding: 10px;
+}
+.nav-item {
+  display: flex; /* Utiliza flexbox para alinear horizontalmente los elementos */
+  align-items: center; /* Alinea verticalmente los elementos en el centro */
+}
+

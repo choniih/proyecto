@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
           sessionStorage.setItem("isLoggedIn", true);
         }
+        localStorage.setItem("username", username);
         window.location.href = "index.html";
       } else {
         alert("Por favor, ingresa usuario y contraseña válidos.");

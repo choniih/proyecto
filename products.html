@@ -32,17 +32,20 @@
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
           <li class="nav-item">
-          </li>
+            <span id="username-display"></span>
+            <button class="logout-btn" type="button"><i class="fas fa-sign-out-alt"></i></button>
+        </li>
         </ul>
       </div>
     </div>
   </nav>
   <main class="pb-5 container">
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
+    <div class="text-center p-4">
+      <h1>Autos</h1>
+      <p class="lead">El auto que buscas</p>
     </div>
+    <div class="container" id="containerAuto">
+      </div>
   </main>
   <footer class="text-muted">
     <div class="container">
@@ -63,6 +66,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/products.js"></script>
+  <script src="js/logout.js"></script>
 </body>
 
 </html>
