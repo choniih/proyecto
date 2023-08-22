@@ -188,8 +188,21 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
-.logout-btn {
+.logout-btn{
   background-color:#212529;
   font-family: 'Verdana', serif !important;
   color: white;
+  vertical-align: middle;
 }
+
+#username-display {
+  font-family: 'Verdana', serif !important;
+  color: white;
+  vertical-align: middle;
+  padding: 10px;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+

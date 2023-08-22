@@ -1,7 +1,7 @@
 
-const logoutBtn = document.querySelector(".logout-btn"); 
+const logoutBtn = document.querySelector(".logout-btn");
 logoutBtn.addEventListener("click", () => {
     localStorage.removeItem("isLoggedIn");
     sessionStorage.removeItem("isLoggedIn");
-    window.location.href = "login.html"; 
-});
+    localStorage.removeItem("username");
+    window.location.href = "login.html";
