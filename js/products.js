@@ -1,32 +1,41 @@
-const URL_PRODUCTS_CAR = "https://japceibal.github.io/emercado-api/cats_products/101.json";
+let  productsgeneral = document.getElementById("containerTotal")
+const catID = localStorage.getItem("catID"); //no me había dado cuenta, en categories.js ya tenemos el catid para traer
+const URL_PRODUCTS = "https://japceibal.github.io/emercado-api/cats_products/" + catID +".json";
 
-let productsAutos = document.getElementById("containerAuto");
 
-function showCar(cars) {
-    let carArray = cars.products
+
+function showCategories(element) { //modifiqué esto para que quede genérico según categoría
+    let productArray = element.products
     let append = "";
-    for (let i = 0; i < carArray.length; i++) {
+    for (let i = 0; i < productArray.length; i++) {
         append += `
             <div class="list-group-item list-group-item-action cursor-active">
                 <div class="row">
                     <div class="col-3">
-                        <img src="${carArray[i].image}" alt="${carArray[i].description}" class="img-thumbnail">
+                        <img src="${productArray[i].image}" alt="${productArray[i].description}" class="img-thumbnail">
                     </div>
                     <div class="col">
                         <div class="d-flex w-100 justify-content-between">
-                            <h4 class="mb-1">${carArray[i].name} - ${carArray[i].currency}  ${carArray[i].cost}</h4>
-                            <small class="text-muted">${carArray[i].soldCount} artículos</small>
+                            <h4 class="mb-1">${productArray[i].name} - ${productArray[i].currency}  ${productArray[i].cost}</h4>
+                            <small class="text-muted">${productArray[i].soldCount} artículos</small>
                         </div>
-                        <p class="mb-1">${carArray[i].description}</p>
+                        <p class="mb-1">${productArray[i].description}</p>
                     </div>
                 </div>
             </div>
             `
     }
 
-    document.getElementById("containerAuto").innerHTML += append;
+    document.getElementById("containerTotal").innerHTML += append;
 }
 
-fetch(URL_PRODUCTS_CAR)
+function nameCategoryTitle(element){ //para poder variar el titulo según la categoría que elija
+    let category = document.getElementById("categoriaActiva")
+    let append = `<h1>${element.catName}</h1>`
+    category.innerHTML=append
+}
+
+
+fetch(URL_PRODUCTS)
     .then(res => res.json())
-    .then(data => showCar(data))
+    .then(data => {showCategories(data), nameCategoryTitle(data)})
