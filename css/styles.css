@@ -189,9 +189,15 @@ a.custom-card:hover {
   color: orange;
 }
 .logout-btn{
-  background-color:#212529;
-  font-family: 'Verdana', serif !important;
+  background: none;
+  border: none;
   color: white;
+  vertical-align: middle;
+}
+.logout-btn:hover{
+  background: none;
+  border: none;
+  color: orange;
   vertical-align: middle;
 }
 
@@ -206,3 +212,42 @@ a.custom-card:hover {
   align-items: center;
 }
 
+
+/* estilos para el buscador */
+#searchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+#searchInput {
+  width: 200px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  text-indent: 15px;
+}
+
+#searchButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: -30px;
+  color: #333;
+}
+
+#searchButton:hover {
+  color: orange;
+}
+
+#searchResults  {
+  padding: 50px;
+}
+
+#searchInput::-webkit-search-cancel-button {
+  position: absolute;
+  left: 5px;
+}
