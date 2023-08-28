@@ -1,3 +1,4 @@
+
 const searchResultsDiv = document.getElementById("searchResults");
 const searchTerm = decodeURIComponent(window.location.search.split("=")[1]);
 
@@ -36,6 +37,19 @@ function searchInAllCategories() {
         });
 }
 
+function displaySearchResults(products) {
+    let append = "";
+    if (products.length === 0) {
+        append = `<p>No se encontraron resultados para la búsqueda.</p>`;
+    } else {
+        for (let i = 0; i < products.length; i++) {
+            append += showProduct(products[i]);
+        }
+    }
+    searchResultsDiv.innerHTML = append;
+}
+
+
 
 searchInAllCategories();
 
@@ -57,18 +71,6 @@ function showProduct(product) {
             </div>
         </div>
     `;
-}
-
-function displaySearchResults(products) {
-    let append = "";
-    if (products.length === 0) {
-        append = `<p>No se encontraron resultados para la búsqueda.</p>`;
-    } else {
-        for (let i = 0; i < products.length; i++) {
-            append += showProduct(products[i]);
-        }
-    }
-    searchResultsDiv.innerHTML = append;
 }
 
 function filterProductsBySearchTerm(products, searchTerm) {
