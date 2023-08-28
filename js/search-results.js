@@ -37,14 +37,6 @@ function searchInAllCategories() {
         });
 }
 
-function showProduct(product) {
-    return `
-        <div class="list-group-item list-group-item-action cursor-active">
-            <!-- Código HTML para mostrar el producto -->
-        </div>
-    `;
-}
-
 function displaySearchResults(products) {
     let append = "";
     if (products.length === 0) {
