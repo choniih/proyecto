@@ -10,6 +10,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link href="css/product-info.css" rel="stylesheet">
   <script src="js/check-auth.js"></script>
 </head>
 
@@ -46,10 +47,24 @@
     </div>
   </nav>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+    <div id="product-info-container" class="container">
+      <h1><span id="product-name"></span></h1>
+      <p><b>Precio:</b> <br><span id="product-currency"></span> <span id="product-price"></span></p>
+      <p><b>Descripción:</b> <br> <span id="product-description"></span></p>
+      <p><b>Categoría:</b><br> <span id="product-category"></span></p>
+      <p><b>Cantidad Vendida:</b><br> <span id="product-soldCount"></span></p>
+
+      <p><b>Imágenes del Producto:</b></p>
+      <div id="product-images">
+        
       </div>
+  
+      <p><b>Productos Relacionados:</b></p>
+      <ul id="related-products">
+         
+      </ul>
+  </div>
+  
     </div>
   </main>
   <footer class="text-muted">
