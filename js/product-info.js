@@ -126,9 +126,21 @@ commentForm.addEventListener("submit", (event) => {
   // Limpia el formulario después de agregar el comentario
   ratingSelect.value = "1";
   commentText.value = "";
+  selectedStars.innerHTML = "";
 });
+
 
 // Llamar a la función para cargar los comentarios del producto seleccionado
 if (selectedProductID) {
   loadProductComments(selectedProductID);
 }
+
+//  muestra el rango de estrellas seleccionadas
+const ratingInput = document.getElementById("comment-rating");
+const selectedStars = document.getElementById("selected-stars");
+
+ratingInput.addEventListener("input", () => {
+  const selectedRating = parseInt(ratingInput.value);
+  selectedStars.innerHTML = scoreToStars(selectedRating);
+  
+});
