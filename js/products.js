@@ -23,6 +23,11 @@ function showProducts(products) {
                 </div>
             </div>
         `;
+        // Guardar id del producto y redirigir
+        productItem.addEventListener("click", () => {
+            localStorage.setItem("selectedProductID", product.id); 
+            window.location.href = "product-info.html"; 
+        });
         productContainer.appendChild(productItem);
     }
 }
