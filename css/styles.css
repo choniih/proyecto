@@ -191,7 +191,7 @@ a.custom-card:hover {
 .logout-btn{
   background: none;
   border: none;
-  color: white;
+  color: black;
   vertical-align: middle;
 }
 .logout-btn:hover{
@@ -259,4 +259,10 @@ input[type="range"] {
   border: none;
   border-radius: 5px;
   outline: none;
+}
+
+/* Estilos de Modo Nocturno */
+.modo-nocturno {
+  background-color: #333;
+  color: #fff;
 }

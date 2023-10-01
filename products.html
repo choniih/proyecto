@@ -9,12 +9,14 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css" >
   <script src="js/check-auth.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
 </head>
 
 <body>
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
     <div class="container">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,14 +39,31 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
+
           <li class="nav-item">
-            <span id="username-display"></span>
-            <button class="logout-btn" type="button"><i class="fas fa-sign-out-alt"></i></button>
+            <div class="dropdown">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <span id="username-display"></span>
+              </a>
+              
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="cart.html">Mi carrito</a></li>
+                <li><a class="dropdown-item" href="my-profile.html">Mi perfil</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><button class="logout-btn"class="dropdown-item" type="button"><i class="fas fa-sign-out-alt"></i>Cerrar secion</button></li>
+                </li>   
+                <li><button id="modoNocturno"><i class="fas fa-moon"></i></button></li>
+              </ul>
+            </div>
+           
+            
         </li>
         </ul>
       </div>
     </div>
   </nav>
+
+  
   <main class="pb-5 container">
     <div class="text-center p-4">
       <h1 id="categoriaActiva"></h1>
@@ -105,6 +124,9 @@
     
     </div>
   </div>
+  
+    
+ 
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/products.js"></script>
