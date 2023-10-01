@@ -10,6 +10,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link href="css/product-info.css" rel="stylesheet">
   <script src="js/check-auth.js"></script>
 </head>
 
@@ -37,19 +38,68 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
+
           <li class="nav-item">
-            <span id="username-display"></span>
+            <div class="dropdown">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <span id="username-display"></span>
+              </a>
+              
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="cart.html">Mi carrito</a></li>
+                <li><a class="dropdown-item" href="my-profile.html">Mi perfil</a></li>
+                <li><a class="dropdown-item" href="login.html">Cerrar sesión</a></li>
+                </li>   
+                <button class="logout-btn" type="button"><i class="fas fa-sign-out-alt"></i></button>
+              </ul>
+            </div>
             <button class="logout-btn" type="button"><i class="fas fa-sign-out-alt"></i></button>
+            <button id="modoNocturno"><i class="fas fa-moon"></i></button>
         </li>
         </ul>
       </div>
     </div>
   </nav>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+    <div id="product-info-container" class="container">
+      <h1><span id="product-name"></span></h1>
+      <p><b>Precio:</b> <br><span id="product-currency"></span> <span id="product-price"></span></p>
+      <p><b>Descripción:</b> <br> <span id="product-description"></span></p>
+      <p><b>Categoría:</b><br> <span id="product-category"></span></p>
+      <p><b>Cantidad Vendida:</b><br> <span id="product-soldCount"></span></p>
+
+      <p><b>Imágenes del Producto:</b></p>
+      <div id="product-images">
+        
       </div>
+  
+      <p><b>Productos Relacionados:</b></p>
+      <ul id="related-products">
+         
+      </ul>
+  </div>
+  
+  <!-- Caja de comentarios -->
+<div id="product-comments">
+  <p id="pcom">Comentarios</p>
+  <ul id="comment-list"></ul>
+  <form id="comment-form">
+    <div class="form-group">
+      <label for="comment-text">Comentar:</label>
+      <textarea class="form-control" id="comment-text" rows="4"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="comment-rating">Puntuación:</label>
+      <input type="range" class="form-control" id="comment-rating" min="1" max="5" step="1">
+    </div>
+    <div class="form-group">
+      <label for="selected-stars">Estrellas:</label>
+      <span id="selected-stars"></span>
+    </div>    
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>
+  
     </div>
   </main>
   <footer class="text-muted">
@@ -72,6 +122,7 @@
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
   <script src="js/logout.js"></script>
+  <script src="js/search.js"></script>
 </body>
 
 </html>

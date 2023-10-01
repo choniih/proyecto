@@ -23,9 +23,9 @@
         <ul class="navbar-nav w-100 justify-content-between">
           <li class="nav-item">
             <div id="searchContainer">
-                <input type="search" id="searchInput" placeholder="Buscar...">
-                <button id="searchButton"><i class="fas fa-search"></i></button>
-            </div>
+              <input type="search" id="searchInput" placeholder="Buscar...">
+              <button id="searchButton"><i class="fas fa-search"></i></button>
+          </div>
       </li>
           <li class="nav-item">
             <a class="nav-link active" href="index.html">Inicio</a>
@@ -36,9 +36,23 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
+
           <li class="nav-item">
-            <span id="username-display"></span>
+            <div class="dropdown">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <span id="username-display"></span>
+              </a>
+              
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="cart.html">Mi carrito</a></li>
+                <li><a class="dropdown-item" href="my-profile.html">Mi perfil</a></li>
+                <li><a class="dropdown-item" href="login.html">Cerrar sesión</a></li>
+                </li>   
+                <button class="logout-btn" type="button"><i class="fas fa-sign-out-alt"></i></button>
+              </ul>
+            </div>
             <button class="logout-btn" type="button"><i class="fas fa-sign-out-alt"></i></button>
+            <button id="modoNocturno"><i class="fas fa-moon"></i></button>
         </li>
         </ul>
       </div>
