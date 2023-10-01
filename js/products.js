@@ -82,9 +82,20 @@ function nameCategoryTitle(element) {
 }
 
 
-const modoNocturnoButton = document.getElementById('modoNocturno');
-  const body = document.body;
 
-  modoNocturnoButton.addEventListener('click', () => {
+  const modoNocturnoButton = document.getElementById('modoNocturno');
+const body = document.body;
+
+const modoNocturnoEnabled = localStorage.getItem('modoNocturnoEnabled') === 'true';
+function toggleModoNocturno() {
     body.classList.toggle('modo-nocturno');
-  });
+    
+    localStorage.setItem('modoNocturnoEnabled', body.classList.contains('modo-nocturno'));
+}
+if (modoNocturnoEnabled) {
+    body.classList.add('modo-nocturno');
+}
+modoNocturnoButton.addEventListener('click', () => {
+    toggleModoNocturno();
+});
+
