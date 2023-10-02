@@ -64,24 +64,48 @@
   </nav>
 
   <main>
-    <div id="product-info-container" class="container">
-      <h1><span id="product-name"></span></h1>
-      <p><b>Precio:</b> <br><span id="product-currency"></span> <span id="product-price"></span></p>
-      <p><b>Descripción:</b> <br> <span id="product-description"></span></p>
-      <p><b>Categoría:</b><br> <span id="product-category"></span></p>
-      <p><b>Cantidad Vendida:</b><br> <span id="product-soldCount"></span></p>
-
-      <p><b>Imágenes del Producto:</b></p>
-      <div id="product-images">
-        
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div id="product-info-container">
+            <h1><span id="product-name"></span></h1>
+            <br>
+            <p><b>Precio:</b> <br><span id="product-currency"></span> <span id="product-price"></span></p>
+            <p><b>Descripción:</b> <br> <span id="product-description"></span></p>
+            <p><b>Categoría:</b><br> <span id="product-category"></span></p>
+            <p><b>Cantidad Vendida:</b><br> <span id="product-soldCount"></span></p>
+            
+          </div>
+        </div>
+        <div class="col-md-6">
+          <br><br>
+          
+          <div id="product-images" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Las imágenes del producto se mostrarán aquí -->
+            </div>
+            <a class="carousel-control-prev" href="#product-images" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#product-images" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </a>
+          </div>
+        </div>
       </div>
-  
-      <p><b>Productos Relacionados:</b></p>
+    </div>
+    <br><br>
+    <hr class="full-width-line">
+    <br>
+      <p align="center"><b>Productos Relacionados:</b></p>
+      <br>
       <ul id="related-products">
          
       </ul>
   </div>
-  
+  <hr class="full-width-line">
   <!-- Caja de comentarios -->
 <div id="product-comments">
   <p id="pcom">Comentarios</p>
