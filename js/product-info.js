@@ -16,14 +16,27 @@ if (!selectedProductID) {
             document.getElementById("product-soldCount").textContent = productInfo.soldCount;
             document.getElementById("product-category").textContent = productInfo.category;
 
-            // Rellenar las imágenes del producto
-            const productImagesContainer = document.getElementById("product-images");
+            const productImagesCarousel = document.querySelector("#product-images .carousel-inner");
+
+            // Variable para rastrear la primera imagen para que sea activa
+            let isFirstImage = true;
+            
             for (const imageSrc of productInfo.images) {
+                const carouselItem = document.createElement("div");
+                carouselItem.classList.add("carousel-item");
+            
+                if (isFirstImage) {
+                    carouselItem.classList.add("active");
+                    isFirstImage = false;
+                }
+            
                 const imageElement = document.createElement("img");
                 imageElement.src = imageSrc;
-                productImagesContainer.appendChild(imageElement);
+                imageElement.classList.add("d-block", "w-100");
+                
+                carouselItem.appendChild(imageElement);
+                productImagesCarousel.appendChild(carouselItem);
             }
-
             // Rellenar los productos relacionados
             const relatedProductsList = document.getElementById("related-products");
             for (const relatedProduct of productInfo.relatedProducts) {
