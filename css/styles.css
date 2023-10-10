@@ -192,21 +192,13 @@ a.custom-card:hover {
   background: none;
   border: none;
   color: black;
-  vertical-align: middle;
 }
 .logout-btn:hover{
   background: none;
   border: none;
   color: orange;
-  vertical-align: middle;
 }
 
-#username-display {
-  font-family: 'Verdana', serif !important;
-  color: white;
-  vertical-align: middle;
-  padding: 10px;
-}
 .nav-item {
   display: flex;
   align-items: center;
@@ -265,4 +257,16 @@ input[type="range"] {
 .modo-nocturno {
   background-color: #333;
   color: #fff;
+}
+/* Estilos de btn Modo Nocturno */
+#modoNocturno {
+  background: none;
+  border: none;
+  color: black;
+}
+
+#modoNocturno:hover{
+  background: none;
+  border: none;
+  color: orange;
 }
