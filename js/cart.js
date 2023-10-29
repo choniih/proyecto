@@ -70,16 +70,16 @@ document.addEventListener("DOMContentLoaded", function () {
                     <h5>Tipo de envío:</h5>
                     <label>
                       <input type="radio" name="tipoEnvio" value="envioNormal">
-                      Premium 2 a 5 días
+                      Premium 2 a 5 días (15%)
                     </label><br>
                     <label>
                         <input type="radio" name="tipoEnvio" value="envioExpress">
-                        Express 5 a 8 días
+                        Express 5 a 8 días (7%)
                         </label><br>
 
                     <label>
                       <input type="radio" name="tipoEnvio" value="retiroLocal">
-                      Standard 12 a 15 días
+                      Standard 12 a 15 días (5%)
                     </label>
                   </div>
                   <br><br>
